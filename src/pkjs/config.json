@@ -1,0 +1,120 @@
+[
+  {
+    "type": "heading",
+    "defaultValue": "World Cup 2026"
+  },
+  {
+    "type": "section",
+    "items": [
+      {
+        "type": "heading",
+        "defaultValue": "Favorite Team",
+        "size": 4
+      },
+      {
+        "type": "select",
+        "messageKey": "TEAM_IDX",
+        "label": "Team",
+        "defaultValue": 47,
+        "options": [
+          { "label": "ALB - Albania",      "value": 0  },
+          { "label": "ARG - Argentina",    "value": 1  },
+          { "label": "AUS - Australia",    "value": 2  },
+          { "label": "AUT - Austria",      "value": 3  },
+          { "label": "BEL - Belgium",      "value": 4  },
+          { "label": "BRA - Brazil",       "value": 5  },
+          { "label": "CMR - Cameroon",     "value": 6  },
+          { "label": "CAN - Canada",       "value": 7  },
+          { "label": "CIV - Ivory Coast",  "value": 8  },
+          { "label": "COL - Colombia",     "value": 9  },
+          { "label": "CRC - Costa Rica",   "value": 10 },
+          { "label": "CRO - Croatia",      "value": 11 },
+          { "label": "CZE - Czech Rep.",   "value": 12 },
+          { "label": "DEN - Denmark",      "value": 13 },
+          { "label": "ECU - Ecuador",      "value": 14 },
+          { "label": "EGY - Egypt",        "value": 15 },
+          { "label": "ENG - England",      "value": 16 },
+          { "label": "ESP - Spain",        "value": 17 },
+          { "label": "FRA - France",       "value": 18 },
+          { "label": "GER - Germany",      "value": 19 },
+          { "label": "GHA - Ghana",        "value": 20 },
+          { "label": "GRE - Greece",       "value": 21 },
+          { "label": "HON - Honduras",     "value": 22 },
+          { "label": "HUN - Hungary",      "value": 23 },
+          { "label": "IRN - Iran",         "value": 24 },
+          { "label": "IRQ - Iraq",         "value": 25 },
+          { "label": "JPN - Japan",        "value": 26 },
+          { "label": "JOR - Jordan",       "value": 27 },
+          { "label": "KOR - South Korea",  "value": 28 },
+          { "label": "MLI - Mali",         "value": 29 },
+          { "label": "MAR - Morocco",      "value": 30 },
+          { "label": "MEX - Mexico",       "value": 31 },
+          { "label": "NED - Netherlands",  "value": 32 },
+          { "label": "NGA - Nigeria",      "value": 33 },
+          { "label": "NZL - New Zealand",  "value": 34 },
+          { "label": "PAN - Panama",       "value": 35 },
+          { "label": "PAR - Paraguay",     "value": 36 },
+          { "label": "POL - Poland",       "value": 37 },
+          { "label": "POR - Portugal",     "value": 38 },
+          { "label": "SAU - Saudi Arabia", "value": 39 },
+          { "label": "SCO - Scotland",     "value": 40 },
+          { "label": "SEN - Senegal",      "value": 41 },
+          { "label": "SRB - Serbia",       "value": 42 },
+          { "label": "SUI - Switzerland",  "value": 43 },
+          { "label": "TUR - Turkey",       "value": 44 },
+          { "label": "UKR - Ukraine",      "value": 45 },
+          { "label": "URU - Uruguay",      "value": 46 },
+          { "label": "USA - United States","value": 47 }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "section",
+    "items": [
+      {
+        "type": "heading",
+        "defaultValue": "Notifications",
+        "size": 4
+      },
+      {
+        "type": "toggle",
+        "messageKey": "VIBRATE",
+        "label": "Vibrate on Goal",
+        "defaultValue": true
+      }
+    ]
+  },
+  {
+    "type": "section",
+    "items": [
+      {
+        "type": "heading",
+        "defaultValue": "Display",
+        "size": 4
+      },
+      {
+        "type": "toggle",
+        "messageKey": "BATTERY_BAR",
+        "label": "Battery Bar",
+        "defaultValue": true
+      },
+      {
+        "type": "select",
+        "messageKey": "TICKER_SPEED",
+        "label": "Ticker Speed",
+        "defaultValue": "10000",
+        "options": [
+          { "label": "5 seconds",  "value": "5000"  },
+          { "label": "10 seconds", "value": "10000" },
+          { "label": "30 seconds", "value": "30000" },
+          { "label": "60 seconds", "value": "60000" }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "submit",
+    "defaultValue": "Save"
+  }
+]

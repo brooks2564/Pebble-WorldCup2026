@@ -1,0 +1,53 @@
+{
+  "name": "worldcup2026-live",
+  "author": "Brooman Inks",
+  "version": "1.0.0",
+  "keywords": ["pebble-app"],
+  "private": true,
+  "dependencies": {
+    "pebble-clay": "github:brooks2564/pebble-clay-flint"
+  },
+  "pebble": {
+    "displayName": "World Cup 2026",
+    "shortName": "WC 2026",
+    "longName": "World Cup 2026 Live",
+    "uuid": "9834ceb2-2fa2-4c1f-9b51-848d220eac34",
+    "sdkVersion": "3",
+    "enableMultiJS": true,
+    "targetPlatforms": [
+      "aplite",
+      "basalt",
+      "chalk",
+      "diorite",
+      "emery",
+      "flint"
+    ],
+    "watchapp": {
+      "watchface": true
+    },
+    "capabilities": [
+      "configurable"
+    ],
+    "messageKeys": {
+      "AWAY_ABBR":    1,
+      "HOME_ABBR":    2,
+      "AWAY_SCORE":   3,
+      "HOME_SCORE":   4,
+      "MATCH_MIN":    5,
+      "MATCH_PERIOD": 6,
+      "STATUS":       7,
+      "TEAM_IDX":     8,
+      "START_TIME":   9,
+      "GROUP_INFO":   10,
+      "VIBRATE":      11,
+      "NEXT_MATCH":   12,
+      "BATTERY_BAR":  13,
+      "TICKER":       14,
+      "TV_NETWORK":   15,
+      "TICKER_SPEED": 16
+    },
+    "resources": {
+      "media": []
+    }
+  }
+}
