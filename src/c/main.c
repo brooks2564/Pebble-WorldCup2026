@@ -275,8 +275,8 @@ static void canvas_update(Layer *layer, GContext *ctx) {
   GFont f14 = fonts_get_system_font(FONT_KEY_GOTHIC_18);
   int score_w=110, abbr_w=44;
   int score_y=by-8,  score_h=32;
-  int group_y=by+16, status_y=by+36, status_h=26;
-  int extra_y=by+64;
+  int group_y=by+28, status_y=by+48, status_h=26;
+  int extra_y=by+76;
 #else
   GFont f28 = fonts_get_system_font(FONT_KEY_GOTHIC_28_BOLD);
   GFont f24 = fonts_get_system_font(FONT_KEY_GOTHIC_24_BOLD);
@@ -284,8 +284,8 @@ static void canvas_update(Layer *layer, GContext *ctx) {
   GFont f14 = fonts_get_system_font(FONT_KEY_GOTHIC_14);
   int score_w=68, abbr_w=36;
   int score_y=by-4,  score_h=26;
-  int group_y=by+22, status_y=by+26, status_h=20;
-  int extra_y=by+46;
+  int group_y=by+28, status_y=by+34, status_h=20;
+  int extra_y=by+54;
 #endif
   GFont fsm = fonts_get_system_font(FONT_KEY_GOTHIC_14);
 

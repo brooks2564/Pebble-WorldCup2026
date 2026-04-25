@@ -145,15 +145,24 @@ function getGroupInfo(ev) {
 }
 
 function getMatchMin(ev) {
-  var state = (ev.status && ev.status.type && ev.status.type.state) || "";
+  var state  = (ev.status && ev.status.type && ev.status.type.state) || "";
   var period = (ev.status && ev.status.period) || 0;
   var clock  = (ev.status && ev.status.displayClock) || "";
   if (state === "in") {
-    var half = period === 1 ? "1H" : period === 2 ? "2H" : period === 3 ? "ET" : "PK";
-    // displayClock is often "45:00" — strip trailing :00
-    var min = clock.replace(/:00$/, "").replace(/:.*$/, "");
-    if (min && min !== "0") return (min + "' " + half).substring(0, 10);
-    return half;
+    var half    = period === 1 ? "1H" : period === 2 ? "2H" : period === 3 ? "ET" : "PK";
+    var halfDur = period <= 2 ? 45 * 60 : 15 * 60;
+    var parts   = clock.split(":");
+    var elapsed = 0;
+    if (parts.length === 2) {
+      elapsed = (parseInt(parts[0], 10) || 0) * 60 + (parseInt(parts[1], 10) || 0);
+    } else if (parts.length === 1 && parts[0]) {
+      elapsed = (parseInt(parts[0], 10) || 0) * 60;
+    }
+    var rem    = Math.max(0, halfDur - elapsed);
+    var remMin = Math.floor(rem / 60);
+    var remSec = rem % 60;
+    var ts     = (remMin < 10 ? "0" : "") + remMin + ":" + (remSec < 10 ? "0" : "") + remSec;
+    return (ts + " " + half).substring(0, 10);
   } else if (state === "post") {
     if (period >= 4) return "FT (PK)";
     if (period >= 3) return "FT (ET)";
